@@ -5,5 +5,7 @@ system "cd ",projRoot;
 \l qunit.q
 \l solvers.q
 \l solversTest.q
+\l bond.q
+\l bondTest.q
 
 .qunit.runTests ();

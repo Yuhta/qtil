@@ -1,5 +1,5 @@
 .solvers.bisect: {[f;a;b;opt]
-  tol: $[`tol in key opt; opt `tol; 1e-12];
+  tol: $[`tol in key opt; opt `tol; 1e-14];
   dx: b-a;
   root: a;
   if [0f<f a; dx: a-b; root: b];
