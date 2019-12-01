@@ -17,3 +17,8 @@
   b: log[p%sum c]%neg first t`time;
   :.solvers.bisect[f;0f;b;()!()];
   };
+
+.bond.parYield: {[t]
+  d: exp neg t[`rate]*t[`time];
+  :(1-last d)%(0.5*sum d);
+  };

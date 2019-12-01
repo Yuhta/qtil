@@ -14,3 +14,9 @@
   coupon: 6#4;
   .qunit.assertEquals[.bond.yield[104;([]time;coupon)];0.06406969623711;"yield"];
   };
+
+.bondTest.testParYield: {[]
+  time: 0.5  1.0  1.5   2.0;
+  rate: 0.05 0.06 0.065 0.07;
+  .qunit.assertEquals[.bond.parYield ([]time;rate);0.07074077478783;"par yield"];
+  };
