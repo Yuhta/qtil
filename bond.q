@@ -7,3 +7,13 @@
   c[-1+count t] +: 100f;
   :sum c*exp neg t[`rate]*t[`time];
   };
+
+/ p: price
+/ t: coupon schedule
+.bond.yield: {[p;t]
+  c: `float$t `coupon;
+  c[-1+count t] +: 100f;
+  f: {[p;c;t;y] p-sum c*exp neg y*t}[p;c;t`time];
+  b: log[p%sum c]%neg first t`time;
+  :.solvers.bisect[f;0f;b;()!()];
+  };
