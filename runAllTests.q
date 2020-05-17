@@ -5,6 +5,8 @@ system "cd ",projRoot;
 \l qunit.q
 \l solvers.q
 \l solversTest.q
+\l special.q
+\l specialTest.q
 \l bond.q
 \l bondTest.q
 
