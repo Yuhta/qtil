@@ -7,3 +7,8 @@
   .qunit.assertThrows[.special.binom[10];11;"domain";"binom[10;11]"];
   .qunit.assertThrows[.special.binom[-10];1;"domain";"binom[-10;1]"];
   };
+
+.specialTest.testFactor: {
+  .qunit.assertEquals[.special.factor `long$1e9+7;enlist `long$1e9+7;"factor `long$1e9+7"];
+  .qunit.assertEquals[.special.factor 60;2 2 3 5;"factor 60"];
+  };
